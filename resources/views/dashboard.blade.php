@@ -16,7 +16,7 @@
                 <i class="material-icons">content_copy</i>
               </div>
               <p class="card-category">Used Space</p>
-              <h3 class="card-title">49/50
+              <h3 class="card-title">49/59
                 <small>GB</small>
               </h3>
             </div>
@@ -34,8 +34,8 @@
               <div class="card-icon">
                 <i class="material-icons">store</i>
               </div>
-              <p class="card-category">Revenue</p>
-              <h3 class="card-title">$34,245</h3>
+              <p class="card-category">pemasukan</p>
+              <h3 class="card-title">RP.34,245</h3>
             </div>
             <div class="card-footer">
               <div class="stats">
