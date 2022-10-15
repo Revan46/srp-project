@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 // Route::get('/contact', function () {
 //     return view('contact', ['name' => 'cara revan','phone' => '082.....']);
@@ -29,14 +29,14 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // Auth::routes();
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 
-Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Auth::routes();
+Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+// Auth::routes();
 
-Route::get('/dashboard', 'App\Http\Controllers\HomeController@index')->name('home')->middleware('auth');
+// Route::get('/dashboard', 'App\Http\Controllers\HomeController@index')->name('home')->middleware('auth');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('table-list', function () {
