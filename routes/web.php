@@ -17,26 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/contact', function () {
-//     return view('contact', ['name' => 'cara revan','phone' => '082.....']);
-
-// });
-
-// // Route::view('/contact', 'contact', ['name' => 'cara revan','phone' => '082.....']);
-
-// Route::get('users/{id}', function ($id) {
-//     return 'ini adalah paramater '.$id;
-// });
-
-// Auth::routes();
-// Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
 Auth::routes();
 
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
-// Auth::routes();
-
-// Route::get('/dashboard', 'App\Http\Controllers\HomeController@index')->name('home')->middleware('auth');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('table-list', function () {

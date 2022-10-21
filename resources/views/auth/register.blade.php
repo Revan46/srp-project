@@ -84,6 +84,25 @@
                 </div>
               @endif
             </div>
+            <div class="bmd-form-group{{ $errors->has('level') ? ' has-danger' : '' }} mt-3">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                      <i class="material-icons">face</i>
+                  </span>
+                </div>
+              <select name="level" id="" class="form-control">
+                <option value="" hidden selected>--Pilih Level--</option>
+                <option value="admin">Admin</option>
+                <option value="dosen">Dosen</option>
+                <option value="mahasiswa">Mahasiswa</option>
+              </select>
+              @if ($errors->has('level'))
+                <span class="invalid-feedback" style="display: block;" role="alert">
+                  <strong>{{ $errors->first('level') }}</strong>
+                </span>
+              @endif
+            </div>
             <div class="form-check mr-auto ml-3 mt-3">
               <label class="form-check-label">
                 <input class="form-check-input" type="checkbox" id="policy" name="policy" {{ old('policy', 1) ? 'checked' : '' }} >
