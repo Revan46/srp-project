@@ -28,7 +28,8 @@
       </li>
       <li class="nav-item {{ ($activePage == 'profile' || $activePage == 'user-management') ? ' active' : '' }}">
         <a class="nav-link" data-toggle="collapse" href="#laravelExample" aria-expanded="true">
-          <i><img style="width:25px" src="{{ asset('material') }}/img/laravel.svg"></i>
+          <!-- <i><img style="width:25px" src="{{ asset('material') }}/img/laravel.svg"></i> -->
+          <i class="bi bi-postage"></i>
           <p>{{ __('Poster Day') }}
             <b class="caret"></b>
           </p>
@@ -41,7 +42,7 @@
             <li class="nav-item{{ $activePage == 'documents_pd' ? ' active' : '' }}">
               <a class="nav-link" href="{{ route('documents_pd') }}">
                 <span class="sidebar-mini">
-                  <i class='bx bxl-firebase'></i>
+                  <!-- <i class='bx bxl-firebase'></i> -->
                 </span>
                 <span class="sidebar-normal">{{ __('Document PD') }} </span>
               </a>
@@ -49,7 +50,7 @@
             <li class="nav-item{{ $activePage == 'persyaratan_pd' ? ' active' : '' }}">
               <a class="nav-link" href="{{ route('persyaratan_pd') }}">
                 <span class="sidebar-mini">
-                  <i class='bx bxl-firebase'></i>
+                  <!-- <i class='bx bxl-firebase'></i> -->
                 </span>
                 <span class="sidebar-normal"> {{ __('Persyaratan PD') }} </span>
               </a>
@@ -59,7 +60,8 @@
       </li>
       <li class="nav-item {{ ($activePage == 'profile' || $activePage == 'user-management') ? ' active' : '' }}">
         <a class="nav-link" data-toggle="collapse" href="#laravelExam" aria-expanded="true">
-          <i><img style="width:25px" src="{{ asset('material') }}/img/laravel.svg"></i>
+          <!-- <i><img style="width:25px" src="{{ asset('material') }}/img/laravel.svg"></i> -->
+          <i class="bi bi-journal-text"></i>
           <p>{{ __('Skripsi dan TA') }}
             <b class="caret"></b>
           </p>
@@ -72,7 +74,7 @@
             <li class="nav-item{{ $activePage == 'documents_sta' ? ' active' : '' }}">
               <a class="nav-link" href="{{ route('documents_sta') }}">
                 <span class="sidebar-mini">
-                  <i class='bx bxl-firebase'></i>
+                  <!-- <i class='bx bxl-firebase'></i> -->
                 </span>
                 <span class="sidebar-normal">{{ __('Document STA') }} </span>
               </a>
@@ -80,7 +82,7 @@
             <li class="nav-item{{ $activePage == 'persyaratan_sta' ? ' active' : '' }}">
               <a class="nav-link" href="{{ route('persyaratan_sta') }}">
                 <span class="sidebar-mini">
-                  <i class='bx bxl-firebase'></i>
+                  <!-- <i class='bx bxl-firebase'></i> -->
                 </span>
                 <span class="sidebar-normal"> {{ __('Persyaratan STA') }} </span>
               </a>
@@ -99,7 +101,8 @@
       </li>
       <li class="nav-item {{ ($activePage == 'validasi_pd' || $activePage == 'syarat_pd') ? ' active' : '' }}">
         <a class="nav-link" data-toggle="collapse" href="#PDDropDown" aria-expanded="true">
-          <i><img style="width:25px" src="{{ asset('material') }}/img/laravel.svg"></i>
+          <!-- <i><img style="width:25px" src="{{ asset('material') }}/img/laravel.svg"></i> -->
+          <i class="bi bi-collection"></i>
           <p>{{ __('Kebutuhan PD') }}
             <b class="caret"></b>
           </p>
@@ -112,7 +115,7 @@
             <li class="nav-item{{ $activePage == 'validasi_pd' ? ' active' : '' }}">
               <a class="nav-link" href="{{ route('validasi_pd') }}">
                 <span class="sidebar-mini">
-                  <i class='bx bxl-firebase'></i>
+                  <!-- <i class='bx bxl-firebase'></i> -->
                 </span>
                 <span class="sidebar-normal">{{ __('Validasi Poster Day') }} </span>
               </a>
@@ -120,7 +123,7 @@
             <li class="nav-item{{ $activePage == 'syarat_pd' ? ' active' : '' }}">
               <a class="nav-link" href="{{ route('syarat_pd') }}">
                 <span class="sidebar-mini">
-                  <i class='bx bxl-firebase'></i>
+                  <!-- <i class='bx bxl-firebase'></i> -->
                 </span>
                 <span class="sidebar-normal"> {{ __('Syarat Poster Day') }} </span>
               </a>
@@ -130,7 +133,8 @@
       </li>
       <li class="nav-item {{ ($activePage == 'profile' || $activePage == 'user-management') ? ' active' : '' }}">
         <a class="nav-link" data-toggle="collapse" href="#STADropDown" aria-expanded="true">
-          <i><img style="width:25px" src="{{ asset('material') }}/img/laravel.svg"></i>
+          <!-- <i><img style="width:25px" src="{{ asset('material') }}/img/laravel.svg"></i> -->
+          <i class="bi bi-folder2-open"></i>
           <p>{{ __('Kebutuhan S/TA') }}
             <b class="caret"></b>
           </p>
@@ -143,7 +147,7 @@
             <li class="nav-item{{ $activePage == 'validasi_sta' ? ' active' : '' }}">
               <a class="nav-link" href="{{ route('validasi_sta') }}">
                 <span class="sidebar-mini">
-                  <i class='bx bxl-firebase'></i>
+                  <!-- <i class='bx bxl-firebase'></i> -->
                 </span>
                 <span class="sidebar-normal">{{ __('Validasi Skripsi dan TA') }} </span>
               </a>
@@ -151,7 +155,7 @@
             <li class="nav-item{{ $activePage == 'syarat_sta' ? ' active' : '' }}">
               <a class="nav-link" href="{{ route('syarat_sta') }}">
                 <span class="sidebar-mini">
-                  <i class='bx bxl-firebase'></i>
+                  <!-- <i class='bx bxl-firebase'></i> -->
                 </span>
                 <span class="sidebar-normal"> {{ __('Syarat Skripsi dan TA') }} </span>
               </a>
