@@ -8,26 +8,38 @@
         <div class="card">
           <div class="card-header card-header-primary">
             <h4 class="card-title ">Validasi Poster Day</h4>
-            <p class="card-category"> Here is a subtitle for this table</p>
+            <p class="card-category">Data validasi poster day</p>
           </div>
           <div class="card-body">
             <div class="table-responsive">
               <table class="table">
                 <thead class=" text-primary">
                   <th>
-                    ID
+                    NPM
                   </th>
                   <th>
-                    Name
+                    Nama
                   </th>
                   <th>
-                    Country
+                    Prodi
                   </th>
                   <th>
-                    City
+                    Judul
                   </th>
                   <th>
-                    Salary
+                    File Buku
+                  </th>
+                  <th>
+                    Nama Pembimbing
+                  </th>
+                  <th>
+                    Status
+                  </th>
+                  <th>
+                    Tipe Repository
+                  </th>
+                  <th>
+                    Action
                   </th>
                 </thead>
                 <tbody>
@@ -47,90 +59,21 @@
                     <td class="text-primary">
                       $36,738
                     </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      2
-                    </td>
-                    <td>
-                      Minerva Hooper
-                    </td>
-                    <td>
-                      Curaçao
-                    </td>
-                    <td>
-                      Sinaai-Waas
+                    <td class="text-primary">
+                      <button type="button" class="btn btn-danger btn-sm float-center" data-bs-toggle="modal" data-bs-target="#">
+                        <i class="fa fa-trash"></i>
+                      </button>
                     </td>
                     <td class="text-primary">
-                      $23,789
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      3
-                    </td>
-                    <td>
-                      Sage Rodriguez
-                    </td>
-                    <td>
-                      Netherlands
-                    </td>
-                    <td>
-                      Baileux
+                      $36,738
                     </td>
                     <td class="text-primary">
-                      $56,142
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      4
-                    </td>
-                    <td>
-                      Philip Chaney
-                    </td>
-                    <td>
-                      Korea, South
-                    </td>
-                    <td>
-                      Overland Park
+                      $36,738
                     </td>
                     <td class="text-primary">
-                      $38,735
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      5
-                    </td>
-                    <td>
-                      Doris Greene
-                    </td>
-                    <td>
-                      Malawi
-                    </td>
-                    <td>
-                      Feldkirchen in Kärnten
-                    </td>
-                    <td class="text-primary">
-                      $63,542
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      6
-                    </td>
-                    <td>
-                      Mason Porter
-                    </td>
-                    <td>
-                      Chile
-                    </td>
-                    <td>
-                      Gloucester
-                    </td>
-                    <td class="text-primary">
-                      $78,615
+                      <button type="button" class="btn btn-danger btn-sm float-center" data-bs-toggle="modal" data-bs-target="#">
+                        <i class="fa fa-trash"></i>
+                      </button>
                     </td>
                   </tr>
                 </tbody>
