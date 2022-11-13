@@ -19,7 +19,13 @@
   <div class="sidebar-wrapper">
     <ul class="nav">
       {{-- Dashboard Site --}}
-      <li class="nav-header"> Dashboard Site</li>
+      @if (auth()->user()->level=="admin")
+      <li class="nav-header"> Dashboard Admin</li>
+      @elseif (auth()->user()->level=="dosen")
+      <li class="nav-header"> Dashboard Dosen</li>
+      @else
+      <li class="nav-header"> Dashboard Mahasiswa</li>
+      @endif
       <li class="nav-item{{ $activePage == 'dashboard' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('dashboard') }}">
           <i class="material-icons">dashboard</i>

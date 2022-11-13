@@ -21,4 +21,11 @@ class UserController extends Controller
         $user = User::all();
         return view('users', compact('user'));
     }
+
+    public function destroy($id)
+    {
+        $user = User::find($id);
+        $user->delete();
+        return redirect('/admin/pengguna')->with('sukses','Data berhasil dihapus');
+    }
 }

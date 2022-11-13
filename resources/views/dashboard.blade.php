@@ -8,6 +8,7 @@
 </style>
   <div class="content">
     <div class="container-fluid">
+    @if (auth()->user()->level=="admin")
       <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6">
           <div class="card card-stats">
@@ -76,6 +77,149 @@
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="card card-stats">
+            <div class="card-header card-header-primary card-header-icon">
+              <div class="card-icon">
+                <i class="material-icons">people</i>
+              </div>
+              <p class="card-category">Jumlah Mahasiswa</p>
+              <h3 class="card-title">74
+              </h3>
+            </div>
+            <div class="card-footer">
+              <div class="stats">
+                <!-- <i class="material-icons text-danger">warning</i>
+                <a href="#pablo">Get More Space...</a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="card card-stats">
+            <div class="card-header card-header-warning card-header-icon">
+              <div class="card-icon">
+                <i class="material-icons">person</i>
+              </div>
+              <p class="card-category">Jumlah Dosen</p>
+              <h3 class="card-title">38</h3>
+            </div>
+            <div class="card-footer">
+              <div class="stats">
+                <!-- <i class="material-icons">date_range</i> Last 24 Hours -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    @elseif (auth()->user()->level=="dosen")
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="card card-stats">
+            <div class="card-header card-header-success card-header-icon">
+              <div class="card-icon">
+                <i class="material-icons">content_copy</i>
+              </div>
+              <p class="card-category">Poster Day Tervalidasi</p>
+              <h3 class="card-title">49
+              </h3>
+            </div>
+            <div class="card-footer">
+              <div class="stats">
+                <!-- <i class="material-icons text-danger">warning</i>
+                <a href="#pablo">Get More Space...</a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="card card-stats">
+            <div class="card-header card-header-danger card-header-icon">
+              <div class="card-icon">
+                <i class="material-icons">content_copy</i>
+              </div>
+              <p class="card-category">PD Belum Tervalidasi</p>
+              <h3 class="card-title">5</h3>
+            </div>
+            <div class="card-footer">
+              <div class="stats">
+                <!-- <i class="material-icons">date_range</i> Last 24 Hours -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="card card-stats">
+            <div class="card-header card-header-success card-header-icon">
+              <div class="card-icon">
+                <i class="material-icons">book</i>
+              </div>
+              <p class="card-category">Tugas Akhir Tervalidasi</p>
+              <h3 class="card-title">75</h3>
+            </div>
+            <div class="card-footer">
+              <div class="stats">
+                <!-- <i class="material-icons">local_offer</i> Tracked from Github -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="card card-stats">
+            <div class="card-header card-header-danger card-header-icon">
+              <div class="card-icon">
+              <i class="material-icons">book</i>
+              </div>
+              <p class="card-category">TA Belum Tervalidasi</p>
+              <h3 class="card-title">13</h3>
+            </div>
+            <div class="card-footer">
+              <div class="stats">
+                <!-- <i class="material-icons">update</i> Just Updated -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    @else
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="card card-stats">
+            <div class="card-header card-header-success card-header-icon">
+              <div class="card-icon">
+                <i class="material-icons">content_copy</i>
+              </div>
+              <p class="card-category">Poster Day</p>
+              <h3 class="card-title">49
+              </h3>
+            </div>
+            <div class="card-footer">
+              <div class="stats">
+                <!-- <i class="material-icons text-danger">warning</i>
+                <a href="#pablo">Get More Space...</a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="card card-stats">
+            <div class="card-header card-header-success card-header-icon">
+              <div class="card-icon">
+                <i class="material-icons">book</i>
+              </div>
+              <p class="card-category">Tugas Akhir</p>
+              <h3 class="card-title">75</h3>
+            </div>
+            <div class="card-footer">
+              <div class="stats">
+                <!-- <i class="material-icons">local_offer</i> Tracked from Github -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    @endif
       {{-- <div class="row">
         <div class="col-md-4">
           <div class="card card-chart">
