@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,33 +23,6 @@ Auth::routes();
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('table-list', function () {
-        return view('pages.table_list');
-    })->name('table');
-
-    Route::get('typography', function () {
-        return view('pages.typography');
-    })->name('typography');
-
-    Route::get('icons', function () {
-        return view('pages.icons');
-    })->name('icons');
-
-    Route::get('map', function () {
-        return view('pages.map');
-    })->name('map');
-
-    Route::get('notifications', function () {
-        return view('pages.notifications');
-    })->name('notifications');
-
-    Route::get('rtl-support', function () {
-        return view('pages.language');
-    })->name('language');
-
-});
-
-Route::group(['middleware' => 'auth'], function () {
     Route::get('posterday/documents', ['as' => 'documents_pd', 'uses' => 'App\Http\Controllers\PosterDayController@documents']);
     Route::get('posterday/persyaratan', ['as' => 'persyaratan_pd', 'uses' => 'App\Http\Controllers\PosterDayController@persyaratan']);
 
@@ -60,6 +34,8 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('kebutuhan_sta/validasi', ['as' => 'validasi_sta', 'uses' => 'App\Http\Controllers\KebutuhanSTAController@validasi']);
     Route::get('kebutuhan_sta/syarat', ['as' => 'syarat_sta', 'uses' => 'App\Http\Controllers\KebutuhanSTAController@syarat']);
+
+    Route::get('/users/{id}/delete', [UserController::class, 'destroy']);
 
     Route::get('users', ['as' => 'users', 'uses' => 'App\Http\Controllers\UserController@index']);
     // Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);

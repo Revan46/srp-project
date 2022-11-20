@@ -41,19 +41,14 @@
                 <div class="row">
                   <label class="col-sm-2 col-form-label">{{ __('File Syarat Poster Day') }}</label>
                   <div class="col-sm-7">
-                    <div class="form-group{{ $errors->has('email') ? ' has-danger' : '' }}">
                       <input class="form-control" name="" type="file" required />
-                      @if ($errors->has('email'))
-                        <span id="email-error" class="error text-danger" for="input-email">{{ $errors->first('email') }}</span>
-                      @endif
-                    </div>
                   </div>
                 </div>
                 <div class="row">
                   <label class="col-sm-2 col-form-label">{{ __('Tipe Repository') }}</label>
                   <div class="col-sm-7">
                     <div class="form-group{{ $errors->has('email') ? ' has-danger' : '' }}">
-                      <select name="satuan" class="form-control @error('satuan') is-invalid @enderror">
+                      <select name="satuan" class="form-select @error('satuan') is-invalid @enderror">
                           <option value="gram">Poster Day</option>
                           <option value="Kg">Tugas Akhir</option>
                       </select>

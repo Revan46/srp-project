@@ -38,9 +38,7 @@
                     <td class="text-center">{{$item['level']}}</td>
                     <td class="text-center">
                     @if ($item->level!="admin")
-                      <button type="button" class="btn btn-danger btn-sm float-center" data-bs-toggle="modal" data-bs-target="#">
-                        <i class="fa fa-trash"></i>
-                      </button>
+                    <a href="/users/{{$item->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Yakin mau dihapus ?')"><i class="fa fa-trash"></i></a>
                     @endif
                       <!-- <button type="button" class="btn btn-success btn-sm float-center" data-bs-toggle="modal" data-bs-target="#">
                         <i class="fa fa-edit"></i>
@@ -102,7 +100,7 @@
             </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-light" data-bs-dismiss="modal"><i class="fa fa-times"></i> Tutup</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="fa fa-times"></i> Tutup</button>
           <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Simpan</button>
         </div>
       </div>

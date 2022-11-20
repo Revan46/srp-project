@@ -42,33 +42,69 @@
                 <tbody>
                   <tr>
                     <td>
-                      1
+                      125487254
                     </td>
                     <td>
-                      Dakota Rice
+                      Fulan
                     </td>
                     <td>
-                      Niger
+                      Infor
                     </td>
                     <td>
-                      Oud-Turnhout
+                      Rancang Bangun bla bla
                     </td>
                     <td class="text-primary">
-                      <button type="button" class="btn btn-danger btn-sm float-center" data-bs-toggle="modal" data-bs-target="#">
-                        <i class="fa fa-trash"></i>
+                      <button type="button" class="btn btn-success btn-sm float-center" data-bs-toggle="modal" data-bs-target="#">
+                        Open file
+                      </button>
+                    </td>
+                    <td class="text-primary">
+                      <button type="button" class="btn btn-success btn-sm float-center" data-bs-toggle="modal" data-bs-target="#">
+                        Open file
+                      </button>
+                    </td>
+                    <td class="text-primary">
+                    <button type="button" class="btn btn-danger btn-sm float-center" data-bs-toggle="modal" data-bs-target="#">
+                        Belum Tervalidasi
+                      </button>
+                    </td>
+                    <td class="text-primary">
+                      <button type="button" class="btn btn-success btn-sm float-center" data-bs-toggle="modal" data-bs-target="#">
+                        Validasi
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      125487254
+                    </td>
+                    <td>
+                      Fulan
+                    </td>
+                    <td>
+                      Infor
+                    </td>
+                    <td>
+                      Rancang Bangun bla bla
+                    </td>
+                    <td class="text-primary">
+                      <button type="button" class="btn btn-success btn-sm float-center" data-bs-toggle="modal" data-bs-target="#">
+                        Open file
+                      </button>
+                    </td>
+                    <td class="text-primary">
+                      <button type="button" class="btn btn-success btn-sm float-center" data-bs-toggle="modal" data-bs-target="#">
+                        Open file
+                      </button>
+                    </td>
+                    <td class="text-primary">
+                    <button type="button" class="btn btn-success btn-sm float-center" data-bs-toggle="modal" data-bs-target="#">
+                        Tervalidasi
                       </button>
                     </td>
                     <td class="text-primary">
                       <button type="button" class="btn btn-danger btn-sm float-center" data-bs-toggle="modal" data-bs-target="#">
-                        <i class="fa fa-trash"></i>
-                      </button>
-                    </td>
-                    <td class="text-primary">
-                      $36,738
-                    </td>
-                    <td class="text-primary">
-                      <button type="button" class="btn btn-danger btn-sm float-center" data-bs-toggle="modal" data-bs-target="#">
-                        <i class="fa fa-trash"></i>
+                        Batal Validasi
                       </button>
                     </td>
                   </tr>
