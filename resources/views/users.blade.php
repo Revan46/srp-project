@@ -55,9 +55,8 @@
     </div>
   </div>
   <!-- Modal add -->
-  <div class="modal fade" id="form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" wire:ignore.self>
+  <div class="modal fade" id="form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <form autocomplete="off" wire:submit.prevent='createUser'>
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">
@@ -66,33 +65,35 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
+          <form action="/users/create" method="POST">
+            @csrf
             <div class="mb-3">
-              <label for="" class="form-label">Nama Lengkap</label>
-              <input wire:model="nama_lengkap" type="text" class="form-control @error('nama_lengkap') is-invalid @enderror">
-              @error('nama_lengkap')
+              <label for="" class="form-label">Nama</label>
+              <input name="name" type="text" class="form-control @error('name') is-invalid @enderror">
+              @error('name')
                   <div class="invalid-feedback">{{ $message }}</div>
               @enderror
             </div>
             <div class="mb-3">
               <label for="" class="form-label">Email</label>
-              <input wire:model="email" type="text" class="form-control @error('email') is-invalid @enderror">
+              <input name="email" type="email" class="form-control @error('email') is-invalid @enderror">
               @error('email')
                   <div class="invalid-feedback">{{ $message }}</div>
               @enderror
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Password</label>
-                <input wire:model="password" type="password" class="form-control @error('password') is-invalid @enderror">
+                <input name="password" type="password" class="form-control @error('password') is-invalid @enderror">
                 @error('password')
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
             </div>
             <div class="mb-3">
               <label for="" class="form-label">Level</label>
-              <select wire:model="level" class="form-select @error('level') is-invalid @enderror">
+              <select name="level" class="form-select @error('level') is-invalid @enderror">
                 <option value="">- Pilih -</option>
-                <option value="admin">Dosen</option>
-                <option value="penjual">Mahasiswa</option>
+                <option value="dosen">Dosen</option>
+                <option value="mahasiswa">Mahasiswa</option>
               </select>
               @error('level')
                   <div class="invalid-feedback">{{ $message }}</div>
@@ -102,9 +103,9 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="fa fa-times"></i> Tutup</button>
           <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Simpan</button>
+          </form>
         </div>
       </div>
-      </form>
     </div>
   </div>
 </div>

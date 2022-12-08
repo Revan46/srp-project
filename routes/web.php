@@ -35,6 +35,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('kebutuhan_sta/validasi', ['as' => 'validasi_sta', 'uses' => 'App\Http\Controllers\KebutuhanSTAController@validasi']);
     Route::get('kebutuhan_sta/syarat', ['as' => 'syarat_sta', 'uses' => 'App\Http\Controllers\KebutuhanSTAController@syarat']);
 
+    Route::post('/users/create', [UserController::class, 'create']);
     Route::get('/users/{id}/delete', [UserController::class, 'destroy']);
 
     Route::get('users', ['as' => 'users', 'uses' => 'App\Http\Controllers\UserController@index']);
