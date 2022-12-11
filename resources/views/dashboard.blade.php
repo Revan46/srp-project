@@ -85,8 +85,7 @@
                 <i class="material-icons">people</i>
               </div>
               <p class="card-category">Jumlah Mahasiswa</p>
-              <h3 class="card-title">74
-              </h3>
+              <h3 class="card-title">{{ $mahasiswa }}</h3>
             </div>
             <div class="card-footer">
               <div class="stats">
@@ -103,7 +102,7 @@
                 <i class="material-icons">person</i>
               </div>
               <p class="card-category">Jumlah Dosen</p>
-              <h3 class="card-title">38</h3>
+              <h3 class="card-title">{{ $dosen }}</h3>
             </div>
             <div class="card-footer">
               <div class="stats">

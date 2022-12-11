@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -21,6 +22,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('dashboard');
+        $mahasiswa = User::all()->where('level', 'mahasiswa')->count();
+        $dosen = User::all()->where('level', 'dosen')->count();
+        return view('dashboard', compact('mahasiswa', 'dosen'));
     }
 }
