@@ -31,11 +31,11 @@
                       <i class="material-icons">face</i>
                   </span>
                 </div>
-                <input type="text" name="name" class="form-control" placeholder="{{ __('Name...') }}" value="{{ old('name') }}" required>
+                <input type="text" name="nama" class="form-control" placeholder="{{ __('Nama...') }}" value="{{ old('nama') }}" required>
               </div>
-              @if ($errors->has('name'))
+              @if ($errors->has('nama'))
                 <div id="name-error" class="error text-danger pl-3" for="name" style="display: block;">
-                  <strong>{{ $errors->first('name') }}</strong>
+                  <strong>{{ $errors->first('nama') }}</strong>
                 </div>
               @endif
             </div>
@@ -91,15 +91,15 @@
                       <i class="material-icons">face</i>
                   </span>
                 </div>
-              <select name="level" id="" class="form-control">
-                <option value="" hidden selected>--Pilih Level--</option>
+              <select name="tipe_user" id="" class="form-control">
+                <option value="" hidden selected>--Pilih Tipe--</option>
                 <option value="admin">Admin</option>
                 <option value="dosen">Dosen</option>
                 <option value="mahasiswa">Mahasiswa</option>
               </select>
-              @if ($errors->has('level'))
+              @if ($errors->has('tipe_user'))
                 <span class="invalid-feedback" style="display: block;" role="alert">
-                  <strong>{{ $errors->first('level') }}</strong>
+                  <strong>{{ $errors->first('tipe_user') }}</strong>
                 </span>
               @endif
             </div>

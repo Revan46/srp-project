@@ -19,9 +19,9 @@
   <div class="sidebar-wrapper">
     <ul class="nav">
       {{-- Dashboard Site --}}
-      @if (auth()->user()->level=="admin")
+      @if (auth()->user()->tipe_user=="admin")
       <li class="nav-header"> Dashboard Admin</li>
-      @elseif (auth()->user()->level=="dosen")
+      @elseif (auth()->user()->tipe_user=="dosen")
       <li class="nav-header"> Dashboard Dosen</li>
       @else
       <li class="nav-header"> Dashboard Mahasiswa</li>
@@ -96,7 +96,7 @@
           </ul>
         </div>
       </li>
-      @if (auth()->user()->level=="admin")
+      @if (auth()->user()->tipe_user=="admin")
       {{-- Admin Site --}}
       <li class="nav-header"> Admin Site</li>
       <li class="nav-item {{ $activePage == 'users' ? ' active' : '' }}">

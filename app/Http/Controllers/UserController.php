@@ -27,17 +27,19 @@ class UserController extends Controller
     public function create(Request $request)
     {
         $request->validate([
-            'name' => 'required',
+            'npm_nip' => 'required',
+            'nama' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required',
-            'level' => 'required',
+            'tipe_user' => 'required',
         ]);
 
         $user = new User;
-        $user->name = $request->input('name');
+        $user->npm_nip = $request->input('npm_nip');
+        $user->nama = $request->input('nama');
         $user->email = $request->input('email');
         $user->password = Hash::make($request->input('password'));
-        $user->level = $request->input('level');
+        $user->tipe_user = $request->input('tipe_user');
         $user->save();
 
         return redirect('/users')->with('sukses','Data berhasil diinput');

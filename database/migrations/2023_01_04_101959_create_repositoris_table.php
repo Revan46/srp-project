@@ -13,12 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('poster_days', function (Blueprint $table) {
+        Schema::create('repositoris', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained();
-            $table->string('judul');
-            $table->string('nama_pembimbing');
-            $table->string('status_validasi');
+            $table->foreignId('dokumen_id')->constrained();
+            $table->date('tanggal');
+            $table->integer('persentase_plagiarisme')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('poster_days');
+        Schema::dropIfExists('repositoris');
     }
 };

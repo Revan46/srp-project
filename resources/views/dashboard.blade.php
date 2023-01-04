@@ -8,7 +8,7 @@
 </style>
   <div class="content">
     <div class="container-fluid">
-    @if (auth()->user()->level=="admin")
+    @if (auth()->user()->tipe_user=="admin")
       <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6">
           <div class="card card-stats">
@@ -112,7 +112,7 @@
           </div>
         </div>
       </div>
-    @elseif (auth()->user()->level=="dosen")
+    @elseif (auth()->user()->tipe_user=="dosen")
       <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6">
           <div class="card card-stats">

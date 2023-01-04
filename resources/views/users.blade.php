@@ -18,13 +18,16 @@
               <table class="table">
                 <thead class=" text-primary">
                   <th class="text-center">
-                    Name
+                    NPM/NIP
+                  </th>
+                  <th class="text-center">
+                    Nama
                   </th>
                   <th class="text-center">
                     Email
                   </th>
                   <th class="text-center">
-                    Level
+                    Tipe User
                   </th>
                   <th class="text-center">
                     Action
@@ -33,11 +36,12 @@
                 <tbody>
                   @foreach($user as $item)
                   <tr>
-                    <td class="text-center">{{$item['name']}}</td>
+                    <td class="text-center">{{$item['npm_nip']}}</td>
+                    <td class="text-center">{{$item['nama']}}</td>
                     <td class="text-center">{{$item['email']}}</td>
-                    <td class="text-center">{{$item['level']}}</td>
+                    <td class="text-center">{{$item['tipe_user']}}</td>
                     <td class="text-center">
-                    @if ($item->level!="admin")
+                    @if ($item->tipe_user!="admin")
                     <a href="/users/{{$item->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Yakin mau dihapus ?')"><i class="fa fa-trash"></i></a>
                     @endif
                       <!-- <button type="button" class="btn btn-success btn-sm float-center" data-bs-toggle="modal" data-bs-target="#">
@@ -68,9 +72,16 @@
           <form action="/users/create" method="POST">
             @csrf
             <div class="mb-3">
+              <label for="" class="form-label">NPM/NIP</label>
+              <input name="npm_nip" type="number" class="form-control @error('npm_nip') is-invalid @enderror">
+              @error('npm_nip')
+                  <div class="invalid-feedback">{{ $message }}</div>
+              @enderror
+            </div>
+            <div class="mb-3">
               <label for="" class="form-label">Nama</label>
-              <input name="name" type="text" class="form-control @error('name') is-invalid @enderror">
-              @error('name')
+              <input name="nama" type="text" class="form-control @error('nama') is-invalid @enderror">
+              @error('nama')
                   <div class="invalid-feedback">{{ $message }}</div>
               @enderror
             </div>
@@ -89,13 +100,13 @@
                 @enderror
             </div>
             <div class="mb-3">
-              <label for="" class="form-label">Level</label>
-              <select name="level" class="form-select @error('level') is-invalid @enderror">
+              <label for="" class="form-label">Tipe User</label>
+              <select name="tipe_user" class="form-select @error('tipe_user') is-invalid @enderror">
                 <option value="">- Pilih -</option>
                 <option value="dosen">Dosen</option>
                 <option value="mahasiswa">Mahasiswa</option>
               </select>
-              @error('level')
+              @error('tipe_user')
                   <div class="invalid-feedback">{{ $message }}</div>
               @enderror
             </div>

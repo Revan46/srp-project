@@ -22,8 +22,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $mahasiswa = User::all()->where('level', 'mahasiswa')->count();
-        $dosen = User::all()->where('level', 'dosen')->count();
+        $mahasiswa = User::all()->where('tipe_user', 'mahasiswa')->count();
+        $dosen = User::all()->where('tipe_user', 'dosen')->count();
         return view('dashboard', compact('mahasiswa', 'dosen'));
     }
 }

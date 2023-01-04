@@ -13,12 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('skripsi_dan_tas', function (Blueprint $table) {
+        Schema::create('dokumens', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->string('judul');
-            $table->string('nama_pembimbing');
-            $table->string('status_validasi');
+            $table->string('nama_dospem')->nullable();
+            $table->string('abstrak')->nullable();
+            $table->date('tanggal');
+            $table->string('file')->nullable();
+            $table->string('tipe_dokumen')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('skripsi_dan_t_a_s');
+        Schema::dropIfExists('dokumens');
     }
 };
